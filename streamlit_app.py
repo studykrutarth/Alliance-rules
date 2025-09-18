@@ -63,7 +63,7 @@ with st.sidebar:
     else:
         st.info("No NAP alliances listed.")
     st.markdown("---")
-    st.info("This app displays rules sourced directly from a shared Google Sheet.")
+  
     # The language selector has been MOVED from here.
 
 # --- Main Page ---
