@@ -25,7 +25,7 @@ else:
 # Load Rules
 # -----------------------
 try:
-    df = pd.read_csv(sheet_url)
+    df = pd.read_csv(sheet_url, dtype=str).fillna("")
     st.success("✅ Rules loaded from Google Sheets")
 
     # Tag selector
@@ -39,7 +39,8 @@ try:
         if not nap_rules.empty:
             for _, row in nap_rules.iterrows():
                 st.subheader(row["Rule Title"])
-                st.write(row["Description"])
+                # preserve multiple lines
+                st.markdown(row["Description"].replace("\n", "  \n"))
         else:
             st.info("No NAP rules found.")
 
@@ -49,7 +50,8 @@ try:
         if not alliance_rules.empty:
             for _, row in alliance_rules.iterrows():
                 st.subheader(row["Rule Title"])
-                st.write(row["Description"])
+                # preserve multiple lines
+                st.markdown(row["Description"].replace("\n", "  \n"))
         else:
             st.info("No Alliance rules found.")
 
