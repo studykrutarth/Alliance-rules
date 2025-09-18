@@ -47,7 +47,7 @@ st.set_page_config(
 )
 
 # --- Data Source ---
-SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTdeCuHt2ILatPX7la48DIoUotPouNakqGB7Qx6uhxmXFvv06_FNeu-nVLFc0hNPGs92a0YPhSdlfNl/pub?output=csv"
+SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRjTQe7949UoJsHJkQseRFNHfLxjDea7oE0ASbkn3p-zCBJoABDZ33pYUK_kR8nGJcxoI2PrWjIWKaF/pub?output=csv"
 NAP_ALLIANCES = ["WCE", "VRG", "SUP", "QAP", "SLG", "PHA", "WOW", "420", "RKS", "GOD", "HPF Happy Farms"]
 
 # --- Sidebar ---
