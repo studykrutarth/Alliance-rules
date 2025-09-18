@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 
 
-
 # Use st.cache_data to load data only once
 @st.cache_data
 def load_data(url):
@@ -64,18 +63,22 @@ with st.sidebar:
     else:
         st.info("No NAP alliances listed.")
     st.markdown("---")
-
-    # Language Selector with your requested languages
-    st.header("🌐 Language Selection")
-    language = st.selectbox(
-        "Choose your language",
-        ["English", "German", "French", "Chinese", "Spanish"]
-    )
-    st.markdown("---")
     st.info("This app displays rules sourced directly from a shared Google Sheet.")
+    # The language selector has been MOVED from here.
 
 # --- Main Page ---
 st.title("📜 Alliance & NAP Rules")
+
+# --- NEW: Language Selector on Main Page ---
+# We create columns to position the language selector to the right.
+_, col2 = st.columns([3, 1])  # This creates an invisible 3/4 column and a 1/4 column
+with col2:
+    language = st.selectbox(
+        "🌐 Select Language",
+        ["English", "German", "French", "Chinese", "Spanish"]
+    )
+# -----------------------------------------
+
 st.markdown("---")
 
 # --- Load Data ---
