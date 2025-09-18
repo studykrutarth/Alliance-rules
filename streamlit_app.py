@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
+
 # Use st.cache_data to load data only once
 @st.cache_data
 def load_data(url):
