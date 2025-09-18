@@ -26,7 +26,7 @@ else:
 # -----------------------
 try:
     df = pd.read_csv(sheet_url, dtype=str).fillna("")
-    st.success("✅ Rules loaded from Google Sheets")
+
 
     # Tag selector
     st.markdown("### 🏷️ Choose which rules to view:")
